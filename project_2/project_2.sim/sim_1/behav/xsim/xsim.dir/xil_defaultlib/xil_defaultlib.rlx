@@ -2,6 +2,20 @@
 2020.2
 Nov 14 2025
 19:37:27
-E:/vivado/project/MInor/ALU.v,1770263462,verilog,,E:/vivado/project/MInor/ALU_TB.v,,ALU,,,../../../../../../../2025.2/Vivado/data/rsb/busdef,,,,,
+E:/vivado/project/MInor/ALU.v,1770263462,verilog,,E:/vivado/project/MInor/CONTROL_UNIT.v,,ALU,,,../../../../../../../2025.2/Vivado/data/rsb/busdef,,,,,
 E:/vivado/project/MInor/ALU_TB.v,1770263496,verilog,,,,ALU_TB,,,../../../../../../../2025.2/Vivado/data/rsb/busdef,,,,,
+E:/vivado/project/MInor/CONTROL_UNIT.v,1770297063,verilog,,E:/vivado/project/MInor/DATA_MEM.v,,CONTROL_UNIT,,,../../../../../../../2025.2/Vivado/data/rsb/busdef,,,,,
+E:/vivado/project/MInor/DATA_MEM.v,1770297087,verilog,,E:/vivado/project/MInor/project_2/project_2.srcs/sources_1/new/INSTRUCTION_MEM.v,,DATA_MEM,,,../../../../../../../2025.2/Vivado/data/rsb/busdef,,,,,
+E:/vivado/project/MInor/DATA_MEM_TB.v,1770291409,verilog,,,,DATA_MEM_TB,,,../../../../../../../2025.2/Vivado/data/rsb/busdef,,,,,
+E:/vivado/project/MInor/INSTRUCTION_MEM_TB.v,1770290679,verilog,,,,INSTRUCTION_MEM_TB,,,../../../../../../../2025.2/Vivado/data/rsb/busdef,,,,,
+E:/vivado/project/MInor/INSTRUCTION_REG.v,1770296279,verilog,,E:/vivado/project/MInor/PROGRAM_COUNTER.v,,INSTRUCTION_REG,,,../../../../../../../2025.2/Vivado/data/rsb/busdef,,,,,
+E:/vivado/project/MInor/INSTRUCTION_REG_TB.v,1770293126,verilog,,,,INSTRUCTION_REG_TB,,,../../../../../../../2025.2/Vivado/data/rsb/busdef,,,,,
+E:/vivado/project/MInor/PROGRAM_COUNTER.v,1770292644,verilog,,E:/vivado/project/MInor/REGISTER_FILE.v,,PROGRAM_COUNTER,,,../../../../../../../2025.2/Vivado/data/rsb/busdef,,,,,
+E:/vivado/project/MInor/PROGRAM_COUNTER_TB.v,1770292735,verilog,,,,PROGRAM_COUNTER_TB,,,../../../../../../../2025.2/Vivado/data/rsb/busdef,,,,,
+E:/vivado/project/MInor/REGISTER_FILE.v,1770297087,verilog,,E:/vivado/project/MInor/RISC.v,,REGISTER_FILE,,,../../../../../../../2025.2/Vivado/data/rsb/busdef,,,,,
+E:/vivado/project/MInor/REGISTER_FILE_TB.v,1770290283,verilog,,,,REGISTER_FILE_TB,,,../../../../../../../2025.2/Vivado/data/rsb/busdef,,,,,
+E:/vivado/project/MInor/RISC.v,1770296816,verilog,,E:/vivado/project/MInor/RISC_TB.v,,RISC,,,../../../../../../../2025.2/Vivado/data/rsb/busdef,,,,,
+E:/vivado/project/MInor/RISC_TB.v,1770293891,verilog,,,,RISC_TB,,,../../../../../../../2025.2/Vivado/data/rsb/busdef,,,,,
 E:/vivado/project/MInor/project_2/project_2.sim/sim_1/behav/xsim/glbl.v,1756381829,verilog,,,,glbl,,,,,,,,
+E:/vivado/project/MInor/project_2/project_2.srcs/sim_1/new/CONTROL_UNIT_TB.v,1770292148,verilog,,,,CONTROL_UNIT_TB,,,../../../../../../../2025.2/Vivado/data/rsb/busdef,,,,,
+E:/vivado/project/MInor/project_2/project_2.srcs/sources_1/new/INSTRUCTION_MEM.v,1770295765,verilog,,E:/vivado/project/MInor/INSTRUCTION_REG.v,,INSTRUCTION_MEM,,,../../../../../../../2025.2/Vivado/data/rsb/busdef,,,,,

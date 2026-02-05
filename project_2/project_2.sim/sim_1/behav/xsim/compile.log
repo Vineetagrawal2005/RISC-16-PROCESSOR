@@ -1,6 +1,18 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/project/MInor/ALU.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ALU
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/project/MInor/ALU_TB.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_TB
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/project/MInor/project_2/project_2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/project/MInor/CONTROL_UNIT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CONTROL_UNIT
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/project/MInor/DATA_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DATA_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/project/MInor/project_2/project_2.srcs/sources_1/new/INSTRUCTION_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module INSTRUCTION_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/project/MInor/INSTRUCTION_REG.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module INSTRUCTION_REG
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/project/MInor/PROGRAM_COUNTER.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PROGRAM_COUNTER
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/project/MInor/REGISTER_FILE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTER_FILE
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/project/MInor/RISC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RISC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado/project/MInor/RISC_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RISC_TB

@@ -1,2 +1,71 @@
 Time resolution is 1 ps
-$stop called at time : 180 ns : File "E:/vivado/project/MInor/ALU_TB.v" Line 76
+Time: 0 | SYSTEM INITIALIZATION
+Time: 20000 | RESET RELEASED - STARTING FETCH
+--------------------------------------------------
+EXECUTION REPORT | PC: 0000
+Instruction: c10005 | Opcode: c
+Control Signals | RegWr: 0 | MemRd: 0 | Sel: 00
+Register Dump   | R1: 0005 | R2: 0000 | R3: 0000
+ALU Status      | Out: 0000 | Zero: 1 | Parity: 1
+--------------------------------------------------
+EXECUTION REPORT | PC: 0001
+Instruction: c20003 | Opcode: c
+Control Signals | RegWr: 0 | MemRd: 0 | Sel: 00
+Register Dump   | R1: 0005 | R2: 0003 | R3: 0000
+ALU Status      | Out: 0000 | Zero: 1 | Parity: 1
+--------------------------------------------------
+EXECUTION REPORT | PC: 0002
+Instruction: 131200 | Opcode: 1
+Control Signals | RegWr: 0 | MemRd: 0 | Sel: 00
+Register Dump   | R1: 0005 | R2: 0003 | R3: 0003
+ALU Status      | Out: 0003 | Zero: 0 | Parity: 1
+--------------------------------------------------
+EXECUTION REPORT | PC: 0003
+Instruction: xxxxxx | Opcode: x
+Control Signals | RegWr: 0 | MemRd: 0 | Sel: 00
+Register Dump   | R1: 0005 | R2: 0003 | R3: 0003
+ALU Status      | Out: xxxx | Zero: x | Parity: x
+--------------------------------------------------
+EXECUTION REPORT | PC: 0004
+Instruction: xxxxxx | Opcode: x
+Control Signals | RegWr: 0 | MemRd: 0 | Sel: 00
+Register Dump   | R1: 0005 | R2: 0003 | R3: 0003
+ALU Status      | Out: xxxx | Zero: x | Parity: x
+--------------------------------------------------
+EXECUTION REPORT | PC: 0005
+Instruction: xxxxxx | Opcode: x
+Control Signals | RegWr: 0 | MemRd: 0 | Sel: 00
+Register Dump   | R1: 0005 | R2: 0003 | R3: 0003
+ALU Status      | Out: xxxx | Zero: x | Parity: x
+--------------------------------------------------
+EXECUTION REPORT | PC: 0006
+Instruction: xxxxxx | Opcode: x
+Control Signals | RegWr: 0 | MemRd: 0 | Sel: 00
+Register Dump   | R1: 0005 | R2: 0003 | R3: 0003
+ALU Status      | Out: xxxx | Zero: x | Parity: x
+--------------------------------------------------
+EXECUTION REPORT | PC: 0007
+Instruction: xxxxxx | Opcode: x
+Control Signals | RegWr: 0 | MemRd: 0 | Sel: 00
+Register Dump   | R1: 0005 | R2: 0003 | R3: 0003
+ALU Status      | Out: xxxx | Zero: x | Parity: x
+--------------------------------------------------
+EXECUTION REPORT | PC: 0008
+Instruction: xxxxxx | Opcode: x
+Control Signals | RegWr: 0 | MemRd: 0 | Sel: 00
+Register Dump   | R1: 0005 | R2: 0003 | R3: 0003
+ALU Status      | Out: xxxx | Zero: x | Parity: x
+--------------------------------------------------
+EXECUTION REPORT | PC: 0009
+Instruction: xxxxxx | Opcode: x
+Control Signals | RegWr: 0 | MemRd: 0 | Sel: 00
+Register Dump   | R1: 0005 | R2: 0003 | R3: 0003
+ALU Status      | Out: xxxx | Zero: x | Parity: x
+
+================ FINAL VERIFICATION ================
+[SUCCESS] MVI Logic: Immediate values loaded to R1 & R2.
+[ERROR] ALU ADD Logic: Summation result is incorrect.
+[SUCCESS] PC Sequencing: Instructions fetched in order.
+====================================================
+
+$stop called at time : 665 ns : File "E:/vivado/project/MInor/RISC_TB.v" Line 91
