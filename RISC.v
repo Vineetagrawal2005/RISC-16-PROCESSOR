@@ -78,7 +78,9 @@ module RISC(
     );
 
     // 8. Write-Back Multiplexer
-    assign reg_write_data = (sel == 2'b00) ? alu_out :
-                            (sel == 2'b01) ? data_mem_out : src_imm;
+  assign reg_write_data = (sel == 2'b00) ? alu_out :      // For ADD, SUB, etc.
+                        (sel == 2'b01) ? data_mem_out : // For LOAD
+                        (sel == 2'b10) ? src_imm :      // For MVI (Move Immediate)
+                        16'h0000;                       // Default/Safety
 
 endmodule
