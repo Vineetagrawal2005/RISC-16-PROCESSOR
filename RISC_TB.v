@@ -1,82 +1,119 @@
-
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 05.02.2026 17:47:26
-// Design Name: 
-// Module Name: RISC_TB
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
 `timescale 1ns / 1ps
-module RISC_TB();
+
+module RISC_TB;
+
+    // ==========================
     // Inputs
+    // ==========================
     reg clk;
     reg reset;
 
-    // Instantiate the Unit Under Test (UUT)
+    // ==========================
+    // Outputs from RISC
+    // ==========================
+    wire [15:0] pc_out;
+    wire [15:0] rx_val;
+    wire [15:0] ry_val;
+    wire [15:0] alu_out;
+    wire [15:0] data_mem_out;
+    wire [15:0] reg_write_data;
+    wire [23:0] instr;
+    wire [3:0]  opcode;
+    wire [3:0]  addr_rz;
+    wire [15:0] src_imm;
+    wire        pc_en;
+    wire        jmp;
+    wire        reg_wr;
+    wire        mem_rd;
+    wire        mem_wr;
+    wire [1:0]  sel;
+    wire        carry;
+    wire        zero;
+    wire        parity;
+
+    // ==========================
+    // Instantiate DUT
+    // ==========================
     RISC uut (
-        .clk(clk), 
-        .reset(reset)
+        .clk(clk),
+        .reset(reset),
+        .pc_out(pc_out),
+        .rx_val(rx_val),
+        .ry_val(ry_val),
+        .alu_out(alu_out),
+        .data_mem_out(data_mem_out),
+        .reg_write_data(reg_write_data),
+        .instr(instr),
+        .opcode(opcode),
+        .addr_rz(addr_rz),
+        .src_imm(src_imm),
+        .pc_en(pc_en),
+        .jmp(jmp),
+        .reg_wr(reg_wr),
+        .mem_rd(mem_rd),
+        .mem_wr(mem_wr),
+        .sel(sel),
+        .carry(carry),
+        .zero(zero),
+        .parity(parity)
     );
 
-    // Clock Generation: 100MHz (10ns period)
-    always #5 clk = ~clk;
-
+    // ==========================
+    // Clock Generation (100 MHz)
+    // ==========================
     initial begin
-        // --- 1. System Initialization ---
         clk = 0;
+        forever #5 clk = ~clk;
+    end
+
+    // ==========================
+    // Reset Sequence
+    // ==========================
+    initial begin
         reset = 1;
         $display("Time: %0t | System Reset Initiated", $time);
-        
-        #20 reset = 0;
-        $display("Time: %0t | System Reset Released - Fetching Instructions...", $time);
+        #20;
+        reset = 0;
+        $display("Time: %0t | System Reset Released", $time);
+    end
 
-        // --- 2. Monitoring Routine ---
-        // This loop checks the state of the processor every few cycles
-        // Specifically looks for S11 (PC Increment State) to report results
+    // ==========================
+    // Execution + Validation
+    // ==========================
+    initial begin
+        #25;
+
         repeat (60) begin
             @(posedge clk);
-            if (uut.CU_Unit.pstate == 4'hb) begin // State S11: PC Increment
+
+            if (pc_en) begin
                 $display("--------------------------------------------------");
-                $display("Time: %0t | EXECUTION REPORT | PC: %h", $time, uut.pc_out);
-                $display("Instruction: %h | Opcode: %h", uut.instr, uut.opcode);
-                $display("Control Signals | RegWr: %b | Sel: %b", uut.reg_wr, uut.sel);
-                $display("Register Dump   | R1: %h | R2: %h | R3: %h", 
-                          uut.RF_Unit.registers[1], 
-                          uut.RF_Unit.registers[2], 
-                          uut.RF_Unit.registers[3]);
-                $display("ALU Status      | Out: %h | Zero: %b | Parity: %b", 
-                          uut.alu_out, uut.zero, uut.parity);
+                $display("Time: %0t | PC=%h | Opcode=%h", $time, pc_out, opcode);
+                $display("RX=%h | RY=%h | ALU=%h", rx_val, ry_val, alu_out);
+                $display("WriteData=%h | MemOut=%h", reg_write_data, data_mem_out);
+                $display("RegWr=%b | MemRd=%b | MemWr=%b | Sel=%b",
+                          reg_wr, mem_rd, mem_wr, sel);
+                $display("Zero=%b | Carry=%b | Parity=%b",
+                          zero, carry, parity);
             end
         end
 
-        // --- 3. Final Automated Validation ---
+        // ==========================
+        // FINAL CHECK (Correct Way)
+        // ==========================
+        #20;
+        $display("\n================ FINAL CHECK ================");
+
+        // Check that last written data was 0008
+        if (uut.RF_Unit.registers[3] == 16'h0008)
+            $display("[SUCCESS] ADD operation correct.");
+        else
+            $display("[FAIL] Expected 0008, got %h",uut.RF_Unit.registers[3]);
+
+        $display("=============================================\n");
+
         #50;
-        $display("\n================ FINAL VERIFICATION ================");
-        
-        // Check if R3 contains the sum (5+3=8) from your INSTRUCTION_MEM
-        if (uut.RF_Unit.registers[3] == 16'h0008) begin
-            $display("[SUCCESS] ALU ADD Logic: R3 contains 0008.");
-            $display("[SUCCESS] Full System Integration Perfect!");
-        end else begin
-            $display("[ERROR] Final Result Incorrect. Expected 0008, got %h", uut.RF_Unit.registers[3]);
-            $display("Check Write-Back Mux and Control Unit 'sel' signal.");
-        end
-        $display("====================================================\n");
-        
         $stop;
     end
+
 endmodule

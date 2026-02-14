@@ -42,7 +42,7 @@ module DATA_MEM(
         if (mem_rd)
             read_data = ram[addr];   // LOAD operation [cite: 114]
         else
-            read_data = 16'hzzzz;    // High impedance if not reading
+            read_data = 16'h0000;    // High impedance if not reading
     end
 
 endmodule

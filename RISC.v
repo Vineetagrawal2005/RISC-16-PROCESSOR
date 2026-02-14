@@ -22,17 +22,29 @@
 
 module RISC(
     input clk,
-    input reset
+    input reset,
+    output [15:0] pc_out,
+    output [15:0] rx_val,
+    output [15:0] ry_val,
+    output [15:0] alu_out,
+    output [15:0] data_mem_out,
+    output [15:0] reg_write_data,
+    output [23:0] instr,
+    output [3:0]  opcode,
+    output [3:0]  addr_rz,
+    output [15:0] src_imm,
+    output        pc_en,
+    output        jmp,
+    output        reg_wr,
+    output        mem_rd,
+    output        mem_wr,
+    output [1:0]  sel,
+    output        carry,
+    output        zero,
+    output        parity
 );
 
     // Internal wires for interconnection
-    wire [15:0] pc_out, rx_val, ry_val, alu_out, data_mem_out, reg_write_data;
-    wire [23:0] instr;
-    wire [3:0] opcode, addr_rz;
-    wire [15:0] src_imm;
-    wire pc_en, jmp, reg_wr, mem_rd, mem_wr;
-    wire [1:0] sel;
-    wire carry, zero, parity;
 
     // 1. Program Counter
     PROGRAM_COUNTER PC_Unit (

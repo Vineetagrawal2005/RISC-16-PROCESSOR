@@ -1,70 +1,27 @@
 Time resolution is 1 ps
 Time: 0 | System Reset Initiated
-Time: 20000 | System Reset Released - Fetching Instructions...
+Time: 20000 | System Reset Released
 --------------------------------------------------
-Time: 65000 | EXECUTION REPORT | PC: 0000
-Instruction: c10005 | Opcode: c
-Control Signals | RegWr: 0 | Sel: 00
-Register Dump   | R1: 0005 | R2: 0000 | R3: 0000
-ALU Status      | Out: 0000 | Zero: 1 | Parity: 1
+Time: 65000 | PC=0000 | Opcode=c
+RX=0000 | RY=0000 | ALU=0000
+WriteData=0000 | MemOut=0000
+RegWr=0 | MemRd=0 | MemWr=0 | Sel=00
+Zero=1 | Carry=0 | Parity=1
 --------------------------------------------------
-Time: 115000 | EXECUTION REPORT | PC: 0001
-Instruction: c20003 | Opcode: c
-Control Signals | RegWr: 0 | Sel: 00
-Register Dump   | R1: 0005 | R2: 0003 | R3: 0000
-ALU Status      | Out: 0000 | Zero: 1 | Parity: 1
+Time: 115000 | PC=0001 | Opcode=c
+RX=0000 | RY=0000 | ALU=0000
+WriteData=0000 | MemOut=0000
+RegWr=0 | MemRd=0 | MemWr=0 | Sel=00
+Zero=1 | Carry=0 | Parity=1
 --------------------------------------------------
-Time: 175000 | EXECUTION REPORT | PC: 0002
-Instruction: 131200 | Opcode: 1
-Control Signals | RegWr: 0 | Sel: 00
-Register Dump   | R1: 0005 | R2: 0003 | R3: 0003
-ALU Status      | Out: 0003 | Zero: 0 | Parity: 1
---------------------------------------------------
-Time: 235000 | EXECUTION REPORT | PC: 0003
-Instruction: xxxxxx | Opcode: x
-Control Signals | RegWr: 0 | Sel: 00
-Register Dump   | R1: 0005 | R2: 0003 | R3: 0003
-ALU Status      | Out: xxxx | Zero: x | Parity: x
---------------------------------------------------
-Time: 295000 | EXECUTION REPORT | PC: 0004
-Instruction: xxxxxx | Opcode: x
-Control Signals | RegWr: 0 | Sel: 00
-Register Dump   | R1: 0005 | R2: 0003 | R3: 0003
-ALU Status      | Out: xxxx | Zero: x | Parity: x
---------------------------------------------------
-Time: 355000 | EXECUTION REPORT | PC: 0005
-Instruction: xxxxxx | Opcode: x
-Control Signals | RegWr: 0 | Sel: 00
-Register Dump   | R1: 0005 | R2: 0003 | R3: 0003
-ALU Status      | Out: xxxx | Zero: x | Parity: x
---------------------------------------------------
-Time: 415000 | EXECUTION REPORT | PC: 0006
-Instruction: xxxxxx | Opcode: x
-Control Signals | RegWr: 0 | Sel: 00
-Register Dump   | R1: 0005 | R2: 0003 | R3: 0003
-ALU Status      | Out: xxxx | Zero: x | Parity: x
---------------------------------------------------
-Time: 475000 | EXECUTION REPORT | PC: 0007
-Instruction: xxxxxx | Opcode: x
-Control Signals | RegWr: 0 | Sel: 00
-Register Dump   | R1: 0005 | R2: 0003 | R3: 0003
-ALU Status      | Out: xxxx | Zero: x | Parity: x
---------------------------------------------------
-Time: 535000 | EXECUTION REPORT | PC: 0008
-Instruction: xxxxxx | Opcode: x
-Control Signals | RegWr: 0 | Sel: 00
-Register Dump   | R1: 0005 | R2: 0003 | R3: 0003
-ALU Status      | Out: xxxx | Zero: x | Parity: x
---------------------------------------------------
-Time: 595000 | EXECUTION REPORT | PC: 0009
-Instruction: xxxxxx | Opcode: x
-Control Signals | RegWr: 0 | Sel: 00
-Register Dump   | R1: 0005 | R2: 0003 | R3: 0003
-ALU Status      | Out: xxxx | Zero: x | Parity: x
+Time: 175000 | PC=0002 | Opcode=1
+RX=0005 | RY=0003 | ALU=0008
+WriteData=0008 | MemOut=0000
+RegWr=0 | MemRd=0 | MemWr=0 | Sel=00
+Zero=0 | Carry=0 | Parity=0
 
-================ FINAL VERIFICATION ================
-[ERROR] Final Result Incorrect. Expected 0008, got 0003
-Check Write-Back Mux and Control Unit 'sel' signal.
-====================================================
+================ FINAL CHECK ================
+[SUCCESS] ADD operation correct.
+=============================================
 
-$stop called at time : 665 ns : File "E:/vivado/project/MInor/RISC_TB.v" Line 80
+$stop called at time : 685 ns : File "E:/vivado/project/MInor/RISC_TB.v" Line 116

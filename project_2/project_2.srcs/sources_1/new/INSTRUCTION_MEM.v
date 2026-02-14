@@ -30,7 +30,8 @@ module INSTRUCTION_MEM(
         // Example machine code
         mem[0] = 24'hc10005; // MVI R1, 5
         mem[1] = 24'hc20003; // MVI R2, 3
-        mem[2] = 24'h131200; // ADD R3, R1, R2
+        mem[2] = 24'h130120; // ADD R3, R1, R2
+        mem[3] = 24'h000000; // HLT (Enter halt state S9)
     end
     // Instruction fetching logic
     assign instruction = mem[addr]; // Fetch instruction at PC address [cite: 69]

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="RISC_TB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="RISC_TB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="685.001 ns"></ZoomEndTime>
+      <Cursor1Time time="662.516 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="59"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="21" />
+   <wvobject fp_name="/RISC_TB/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/pc_out" type="array">
+      <obj_property name="ElementShortName">pc_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/rx_val" type="array">
+      <obj_property name="ElementShortName">rx_val[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_val[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/ry_val" type="array">
+      <obj_property name="ElementShortName">ry_val[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ry_val[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/alu_out" type="array">
+      <obj_property name="ElementShortName">alu_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/data_mem_out" type="array">
+      <obj_property name="ElementShortName">data_mem_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_mem_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/reg_write_data" type="array">
+      <obj_property name="ElementShortName">reg_write_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_write_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/instr" type="array">
+      <obj_property name="ElementShortName">instr[23:0]</obj_property>
+      <obj_property name="ObjectShortName">instr[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/opcode" type="array">
+      <obj_property name="ElementShortName">opcode[3:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/addr_rz" type="array">
+      <obj_property name="ElementShortName">addr_rz[3:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_rz[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/src_imm" type="array">
+      <obj_property name="ElementShortName">src_imm[15:0]</obj_property>
+      <obj_property name="ObjectShortName">src_imm[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/pc_en" type="logic">
+      <obj_property name="ElementShortName">pc_en</obj_property>
+      <obj_property name="ObjectShortName">pc_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/jmp" type="logic">
+      <obj_property name="ElementShortName">jmp</obj_property>
+      <obj_property name="ObjectShortName">jmp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/reg_wr" type="logic">
+      <obj_property name="ElementShortName">reg_wr</obj_property>
+      <obj_property name="ObjectShortName">reg_wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/mem_rd" type="logic">
+      <obj_property name="ElementShortName">mem_rd</obj_property>
+      <obj_property name="ObjectShortName">mem_rd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/mem_wr" type="logic">
+      <obj_property name="ElementShortName">mem_wr</obj_property>
+      <obj_property name="ObjectShortName">mem_wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/sel" type="array">
+      <obj_property name="ElementShortName">sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/carry" type="logic">
+      <obj_property name="ElementShortName">carry</obj_property>
+      <obj_property name="ObjectShortName">carry</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/zero" type="logic">
+      <obj_property name="ElementShortName">zero</obj_property>
+      <obj_property name="ObjectShortName">zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_TB/parity" type="logic">
+      <obj_property name="ElementShortName">parity</obj_property>
+      <obj_property name="ObjectShortName">parity</obj_property>
+   </wvobject>
+</wave_config>
