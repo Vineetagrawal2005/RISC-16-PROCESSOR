@@ -2,26 +2,58 @@ Time resolution is 1 ps
 Time: 0 | System Reset Initiated
 Time: 20000 | System Reset Released
 --------------------------------------------------
-Time: 65000 | PC=0000 | Opcode=c
+Time: 65000 | PC=0000 | Opcode=c | Instr=c1000a
 RX=0000 | RY=0000 | ALU=0000
-WriteData=0000 | MemOut=0000
-RegWr=0 | MemRd=0 | MemWr=0 | Sel=00
-Zero=1 | Carry=0 | Parity=1
+WriteData=0000 | Sel=00 | RegWr=0
 --------------------------------------------------
-Time: 115000 | PC=0001 | Opcode=c
+Time: 115000 | PC=0001 | Opcode=c | Instr=c20005
 RX=0000 | RY=0000 | ALU=0000
-WriteData=0000 | MemOut=0000
-RegWr=0 | MemRd=0 | MemWr=0 | Sel=00
-Zero=1 | Carry=0 | Parity=1
+WriteData=0000 | Sel=00 | RegWr=0
 --------------------------------------------------
-Time: 175000 | PC=0002 | Opcode=1
-RX=0005 | RY=0003 | ALU=0008
-WriteData=0008 | MemOut=0000
-RegWr=0 | MemRd=0 | MemWr=0 | Sel=00
-Zero=0 | Carry=0 | Parity=0
-
-================ FINAL CHECK ================
-[SUCCESS] ADD operation correct.
-=============================================
-
-$stop called at time : 685 ns : File "E:/vivado/project/MInor/RISC_TB.v" Line 116
+Time: 175000 | PC=0002 | Opcode=1 | Instr=130120
+RX=000a | RY=0005 | ALU=000f
+WriteData=000f | Sel=00 | RegWr=0
+--------------------------------------------------
+Time: 235000 | PC=0003 | Opcode=2 | Instr=240120
+RX=000a | RY=0005 | ALU=0005
+WriteData=0005 | Sel=00 | RegWr=0
+--------------------------------------------------
+Time: 295000 | PC=0004 | Opcode=3 | Instr=350120
+RX=000a | RY=0005 | ALU=0032
+WriteData=0032 | Sel=00 | RegWr=0
+--------------------------------------------------
+Time: 355000 | PC=0005 | Opcode=4 | Instr=460120
+RX=000a | RY=0005 | ALU=0000
+WriteData=0000 | Sel=00 | RegWr=0
+--------------------------------------------------
+Time: 415000 | PC=0006 | Opcode=5 | Instr=570120
+RX=000a | RY=0005 | ALU=000f
+WriteData=000f | Sel=00 | RegWr=0
+--------------------------------------------------
+Time: 475000 | PC=0007 | Opcode=6 | Instr=680120
+RX=000a | RY=0005 | ALU=000f
+WriteData=000f | Sel=00 | RegWr=0
+--------------------------------------------------
+Time: 535000 | PC=0008 | Opcode=8 | Instr=890100
+RX=000a | RY=0000 | ALU=0014
+WriteData=0014 | Sel=00 | RegWr=0
+--------------------------------------------------
+Time: 595000 | PC=0009 | Opcode=9 | Instr=9a0100
+RX=000a | RY=0000 | ALU=0005
+WriteData=0005 | Sel=00 | RegWr=0
+--------------------------------------------------
+Time: 655000 | PC=000a | Opcode=a | Instr=ab0100
+RX=000a | RY=0000 | ALU=000b
+WriteData=000b | Sel=00 | RegWr=0
+--------------------------------------------------
+Time: 715000 | PC=000b | Opcode=b | Instr=bc0200
+RX=0005 | RY=0000 | ALU=0004
+WriteData=0004 | Sel=00 | RegWr=0
+--------------------------------------------------
+Time: 775000 | PC=000c | Opcode=e | Instr=e10064
+RX=0000 | RY=0000 | ALU=0000
+WriteData=0000 | Sel=00 | RegWr=0
+--------------------------------------------------
+Time: 835000 | PC=000d | Opcode=d | Instr=dd0064
+RX=0000 | RY=0000 | ALU=0000
+WriteData=0000 | Sel=00 | RegWr=0
